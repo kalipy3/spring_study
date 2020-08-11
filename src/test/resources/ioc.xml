@@ -16,4 +16,8 @@
         <property name="email" value="hanser@qq.com"></property>
         <property name="gender" value="女"></property>
     </bean>
+    
+    <bean id="person02" class="com.ly.Person">
+        <property name="lastName" value="yousa"></property>
+    </bean>
 </beans>

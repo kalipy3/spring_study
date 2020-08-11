@@ -16,7 +16,7 @@ public class Person
     private String email;
 
 	public Person() {
-		
+        System.out.println("person构造器被调用。。");		
     }
 
     public String getLastName() {
