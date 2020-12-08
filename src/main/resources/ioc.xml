@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:p="http://www.springframework.org/schema/p"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.springframework.org/schema/beans
                         http://www.springframework.org/schema/beans/spring-beans.xsd">
@@ -47,4 +48,19 @@
         <constructor-arg value="男"></constructor-arg>
     </bean>
     
+    <!-- 通过p名称空间为bean赋值 -->
+    <!-- 名称空间:在xml中用来防止标签重复 -->
+    <!-- 
+        <book>
+            <b:name>西游记</b:name>
+            <price>12</price>
+            <author>
+                <a:name>吴承恩</a:name>
+                <gender>男</gender>
+            </author>
+        </book>
+    -->
+    <bean id="person06" class="com.ly.Person" p:age="18" p:email="xiaoming@xx.com" p:lastName="哈哈" p:gender="男">
+    </bean>
+
 </beans>
