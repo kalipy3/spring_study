@@ -17,7 +17,7 @@ public class IOCTest {
         Person bean2 = ioc.getBean("person02", Person.class);
         System.out.println(bean2);
         
-        Object bean = ioc.getBean("person03");
+        Object bean = ioc.getBean("person04");
         System.out.println(bean);
     }
 

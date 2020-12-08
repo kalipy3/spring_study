@@ -30,4 +30,12 @@
         <constructor-arg name="age" value="18"></constructor-arg>
     </bean>
 
+    <bean id="person04" class="com.ly.Person">
+        <!-- 可以省略name属性，严格按照构造器参数的位置 -->
+        <constructor-arg value="小明"></constructor-arg>
+        <constructor-arg value="18"></constructor-arg>
+        <constructor-arg value="男"></constructor-arg>
+        <constructor-arg value="xiaoming@xx.com"></constructor-arg>
+    </bean>
+
 </beans>
