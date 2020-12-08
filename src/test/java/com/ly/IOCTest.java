@@ -1,23 +1,28 @@
 package com.ly;
 
+import java.util.List;
+
 import org.junit.Test;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.ly.Person;
+import com.ly.bean.Book;
 import com.ly.bean.Car;
 
 public class IOCTest {
 
     private ApplicationContext ioc = new ClassPathXmlApplicationContext("ioc2.xml");
 
-    //实验4：正确的为各种属性赋值
-    //  测试使用null值，默认引用类型就是null,基本类型是默认值
     @Test 
-    public void test03() {
-        Person person01 = (Person) ioc.getBean("person01");
+    public void test04() {
+        Person person01 = (Person) ioc.getBean("person02");
 
         Car car = person01.getCar();
         System.out.println(car);
+        List<Book> books = person01.getBooks();
+        System.out.println(books);
     }
 
 }

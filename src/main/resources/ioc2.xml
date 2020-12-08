@@ -32,4 +32,21 @@
             </bean>    
         </property>
     </bean>
+
+    <bean id="book01" class="com.ly.bean.Book">
+        <property name="bookName" value="东游记"></property>
+    </bean>
+
+    <bean id="person02" class="com.ly.Person">
+        <!-- 如何为list类型赋值 -->
+        <property name="books">
+            <!-- books = new ArrayList<Book>(); -->
+            <list>
+                <!-- list标签体中添加每一个元素 -->
+                <bean id="book000x" class="com.ly.bean.Book" p:bookName="西游记"></bean>
+                <!-- 引用外部一个元素 -->
+                <ref bean="book01" />
+            </list>
+        </property>
+    </bean>
 </beans>
