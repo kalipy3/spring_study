@@ -14,16 +14,10 @@ public class IOCTest {
     //  测试使用null值，默认引用类型就是null,基本类型是默认值
     @Test 
     public void test03() {
-        Person bean = (Person) ioc.getBean("person01");
-        System.out.println(bean.getLastName() == null);
-        System.out.println("person的car:" + bean.getCar());
+        Person person01 = (Person) ioc.getBean("person01");
 
-        Car bean2 = (Car) ioc.getBean("car01");
-        bean2.setCarName("haha");
-
-        System.out.println("我修改了容器中的car,你的car变了没?" + bean.getCar());
-        Car car = bean.getCar();
-        System.out.println(bean2 == car);
+        Car car = person01.getCar();
+        System.out.println(car);
     }
 
 }
