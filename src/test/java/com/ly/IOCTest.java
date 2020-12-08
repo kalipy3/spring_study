@@ -16,10 +16,13 @@ public class IOCTest {
     public void test03() {
         Person bean = (Person) ioc.getBean("person01");
         System.out.println(bean.getLastName() == null);
-        System.out.println(bean.getCar());
+        System.out.println("person的car:" + bean.getCar());
 
+        Car bean2 = (Car) ioc.getBean("car01");
+        bean2.setCarName("haha");
+
+        System.out.println("我修改了容器中的car,你的car变了没?" + bean.getCar());
         Car car = bean.getCar();
-        Object bean2 = ioc.getBean("car01");
         System.out.println(bean2 == car);
     }
 

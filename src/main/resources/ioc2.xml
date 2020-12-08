@@ -23,7 +23,7 @@
             <!-- 进行复杂的赋值 -->
             <null/>
         </property>
-            <!-- ref: 代表引用外面的一个值 -->
+            <!-- ref: 代表引用外面的一个值 类似car = ioc.getBean("car01") -->
         <property name="car" ref="car01"></property>
     </bean>
 </beans>
