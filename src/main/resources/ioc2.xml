@@ -13,6 +13,6 @@
         级联属性赋值
     -->
     <bean id="person01" class="com.ly.Person">
-        <!-- property标签为Person对象的属性赋值 -->
+        <property name="lastName" value="null"></property>
     </bean>
 </beans>
