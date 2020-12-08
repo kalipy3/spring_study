@@ -20,4 +20,14 @@
     <bean id="person02" class="com.ly.Person">
         <property name="lastName" value="yousa"></property>
     </bean>
+    
+    <bean id="person03" class="com.ly.Person">
+        <!-- 调用有参构造器进行创建对象并赋值 -->
+        <!-- public Person(String lastName, Integer age, String gender, String email) { -->
+        <constructor-arg name="lastName" value="小明"></constructor-arg>
+        <constructor-arg name="email" value="xiaoming@xx.com"></constructor-arg>
+        <constructor-arg name="gender" value="男"></constructor-arg>
+        <constructor-arg name="age" value="18"></constructor-arg>
+    </bean>
+
 </beans>

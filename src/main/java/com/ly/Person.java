@@ -16,7 +16,7 @@ public class Person
     private String email;
 
 	public Person() {
-        System.out.println("person构造器被调用。。");		
+        System.out.println("person无参构造器被调用。。");		
     }
 
     public String getLastName() {
@@ -60,6 +60,14 @@ public class Person
             ", gender = " + getGender() +
             ", email = " + getEmail() +
             "}";
+    }
+
+    public Person(String lastName, Integer age, String gender, String email) {
+        this.lastName = lastName;
+        this.age = age;
+        this.gender = gender;
+        this.email = email;
+        System.out.println("有参构造器..");
     }
 
 }
