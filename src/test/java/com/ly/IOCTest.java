@@ -23,6 +23,9 @@ public class IOCTest {
         System.out.println(car);
         List<Book> books = person01.getBooks();
         System.out.println(books);
+
+        Object bean = ioc.getBean("carInner");
+        System.out.println(bean);//org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'carInner' available
     }
 
 }
