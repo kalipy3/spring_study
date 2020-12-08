@@ -64,5 +64,14 @@
                 </entry>
             </map>
         </property>
+
+        <property name="properties">
+            <!-- properties = new Properties();所有的k=v都是string -->
+            <props>
+                <!-- k=v都是string:值直接写在标签体中 --> 
+                <prop key="username">root</prop>
+                <prop key="password">123456</prop>
+            </props>
+        </property>
     </bean>
 </beans>

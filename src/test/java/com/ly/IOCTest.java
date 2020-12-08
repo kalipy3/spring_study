@@ -8,6 +8,8 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import org.springframework.core.convert.Property;
+
 import com.ly.Person;
 import com.ly.bean.Book;
 import com.ly.bean.Car;
@@ -25,8 +27,7 @@ public class IOCTest {
         List<Book> books = person01.getBooks();
         System.out.println(books);
 
-        Map<String, Object> maps = person01.getMaps();
-        System.out.println(maps);
+        System.out.println(person01.getProperties());
     }
 
 }
