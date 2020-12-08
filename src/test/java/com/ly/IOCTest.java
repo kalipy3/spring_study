@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.ly.Person;
+import com.ly.bean.Car;
 
 public class IOCTest {
 
@@ -16,6 +17,10 @@ public class IOCTest {
         Person bean = (Person) ioc.getBean("person01");
         System.out.println(bean.getLastName() == null);
         System.out.println(bean.getCar());
+
+        Car car = bean.getCar();
+        Object bean2 = ioc.getBean("car01");
+        System.out.println(bean2 == car);
     }
 
 }
