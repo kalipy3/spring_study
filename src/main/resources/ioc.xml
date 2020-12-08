@@ -40,9 +40,10 @@
 
     <!-- public Person(String lastName, Integer age, String gender) --> 
     <!-- public Person(String lastName, String email, String gender) -->
+    <!-- 重载的情况下type可以指定参数的类型 -->
     <bean id="person05" class="com.ly.Person">
         <constructor-arg value="小丽"></constructor-arg>
-        <constructor-arg value="18"></constructor-arg>
+        <constructor-arg value="18" index="1" type="java.lang.Integer"></constructor-arg>
         <constructor-arg value="男"></constructor-arg>
     </bean>
     
