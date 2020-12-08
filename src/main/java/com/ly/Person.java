@@ -17,7 +17,7 @@ public class Person
 {
     //基本类型直接使用
     //<property name="lastName" value="xx"></property>自动的进行类型转换
-    private String lastName;
+    private String lastName = "小明";
     private Integer age;
     private String gender;
     private String email;
