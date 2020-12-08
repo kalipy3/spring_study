@@ -23,10 +23,10 @@
             <!-- 进行复杂的赋值 -->
             <null/>
         </property>
-        <!-- ref: 代表引用外面的一个值 类似car = ioc.getBean("car01") -->
+        <!-- ref: 代表引用外面的一个值 引用其它bean 类似car = ioc.getBean("car01") -->
         <!-- <property name="car" ref="car01"></property> -->
         <property name="car">
-            <!-- 对象我们可以使用bean标签创建 car = new Car(); -->
+            <!-- 对象我们可以使用bean标签创建 car = new Car(); 引用内部bean -->
             <bean class="com.ly.bean.Car">
                 <property name="carName" value="自行车"></property>
             </bean>    
