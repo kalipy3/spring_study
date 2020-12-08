@@ -1,0 +1,81 @@
+read.txt
+
+:Author: kalipy
+:Email: kalipy@debian
+:Date: 2020-12-08 19:48
+
+1.框架
+    半成品软件
+
+    高度抽取的可重用代码的一种设计，高度的通用性
+
+    多个可重用模块的集合，形成某个领域的整体解决方案
+
+2.Spring
+    容器(可以管理所有的组件(类))框架
+
+    核心关注:IOC和AOP
+
+3.Spring(IOC+AOP)
+    
+                 Spring
+                 /   \
+                /     \
+               /       \
+            IOC容器     \
+            / | \        \
+           /  |  \        AOP(面向切面编程)---------->声明式事务
+          /   |   \                                        ^
+         /    |    \                                       |
+        /     |     \                                      |
+   Struts2 Hibernate Mybatis                           Spring-JdbcTemplate
+
+IOC(Inversion Of Control):
+    控制：资源的获取方式
+        主动式:(要什么资源都自己创建即可)
+            BookServlet {
+                BookService bs = new BookService();
+                AirPlane ap = new AirPlane();//复杂对象的创建是比较庞大的工程
+            }
+
+        被动式：资源的获取不是我们自己创建，而是交给一个容器来创建和设置
+            BookServlet {
+                BookService bs;
+
+                public void test() {
+                    bs.checkout();
+                }
+            }
+
+容器：
+    管理所有的组件(有功能的类)
+
+    主动new资源变为被动的接收资源
+
+    容器好比婚介所，主动获取变被动接收
+
+    只要容器管理的组件，都能使用容器提供的强大功能
+
+DI(Dependency Injection)依赖注入:
+    容器能知道哪个组件(类)运行的时候，需要另一个类(组件),容器通过反射的形式，将容器中准备好的BookService对象注入(利用反射给属性赋值)到BookServlet里
+
+-------------------------------------------------------------------------------
+
+HelloWord
+    以前是自己new对象，现在所有的对象交给容器创建，给容器中注册组件
+
+    以后框架编写流程：
+        1.导包
+            核心容器
+                spring-bean-4.jar
+                spring-context.jar
+                spring-core.jar
+                spring-expression.jar
+                commons-logging.jar(spring运行的时候依赖一个日志包，没有就报错)
+
+        2.写配置
+            xx.xml
+
+        3.测试
+
+
