@@ -14,6 +14,22 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.ly.Person;
 
+/**
+ * 几个细节：
+ *  1.ApplicationContext(IOC容器的接口)
+ *  2.给容器注册一个组件，我们也从容器中按照id拿到了这个组件的对象?
+ *      组件的创建工作，是容器完成
+ *      Person对象是什么时候创建好了呢？
+ *      容器对象的创建在容器创建完成的时候就已经创建好了
+ *  3.同一个组件在ioc容器中是单例模式的
+ *  4.容器中如果没有这个组件，获取组件?
+ *  org.springframework.beans.factory.NoSuchBeanDefinitionException:
+ *  No bean named 'persion03' is defined
+ *  5.ioc容器在在创建这个组件对象的时候，(property)会利用setter方法为javaBean的属性进行赋值
+ *  6.javaBean的属性名是由什么决定的?getter/setter方法是属性名，set去掉后面那一串首字母小写就是属性名
+ *  所有getter/setter都自动生成
+ */
+
 public class AppTest {
     //从容器(ApplicationContext)中拿到这个组件(Person)
     @Test 

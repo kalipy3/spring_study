@@ -24,6 +24,7 @@ public class Person
     }
 
     public void setLastName(String lastName) {
+        System.out.println("setLastName。。"+lastName);		
         this.lastName = lastName;
     }
 
