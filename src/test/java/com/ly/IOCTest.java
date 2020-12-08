@@ -1,6 +1,7 @@
 package com.ly;
 
 import java.util.List;
+import java.util.Map;
 
 import org.junit.Test;
 
@@ -24,8 +25,8 @@ public class IOCTest {
         List<Book> books = person01.getBooks();
         System.out.println(books);
 
-        Object bean = ioc.getBean("carInner");
-        System.out.println(bean);//org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'carInner' available
+        Map<String, Object> maps = person01.getMaps();
+        System.out.println(maps);
     }
 
 }
