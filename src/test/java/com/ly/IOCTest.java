@@ -14,8 +14,8 @@ public class IOCTest {
     //No qualifying bean of type 'com.ly.Person' available: expected single matching bean but found 2: person01,person02
     @Test 
     public void test02() {
-        Person bean = ioc.getBean(Person.class);
-        System.out.println(bean);
+        Person bean2 = ioc.getBean("person02", Person.class);
+        System.out.println(bean2);
     }
 
 }
