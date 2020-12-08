@@ -7,17 +7,13 @@ import com.ly.Person;
 
 public class IOCTest {
 
-    private ApplicationContext ioc = new ClassPathXmlApplicationContext("ioc.xml");
+    private ApplicationContext ioc = new ClassPathXmlApplicationContext("ioc2.xml");
 
-    //实验2：根据bean的类型从IOC容器中获取bean的实例
-    //org.springframework.beans.factory.NoUniqueBeanDefinitionException
-    //No qualifying bean of type 'com.ly.Person' available: expected single matching bean but found 2: person01,person02
+    //实验4：正确的为各种属性赋值
+    //  测试使用null值，默认引用类型就是null,基本类型是默认值
     @Test 
-    public void test02() {
-        Person bean2 = ioc.getBean("person02", Person.class);
-        System.out.println(bean2);
-        
-        Object bean = ioc.getBean("person06");
+    public void test03() {
+        Object bean = ioc.getBean("person01");
         System.out.println(bean);
     }
 
