@@ -12,10 +12,18 @@
             util名称空间创建集合类型的bean
         级联属性赋值
     -->
+
+    <bean id="car01" class="com.ly.bean.Car">
+        <property name="carName" value="宝马"></property>
+        <property name="color" value="green"></property>
+        <property name="price" value="30000"></property>
+    </bean>
     <bean id="person01" class="com.ly.Person">
         <property name="lastName">
             <!-- 进行复杂的赋值 -->
             <null/>
         </property>
+            <!-- ref: 代表引用外面的一个值 -->
+        <property name="car" ref="car01"></property>
     </bean>
 </beans>

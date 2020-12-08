@@ -14,8 +14,8 @@ public class IOCTest {
     @Test 
     public void test03() {
         Person bean = (Person) ioc.getBean("person01");
-        System.out.println(bean);
         System.out.println(bean.getLastName() == null);
+        System.out.println(bean.getCar());
     }
 
 }
