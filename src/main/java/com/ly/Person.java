@@ -70,5 +70,19 @@ public class Person
         System.out.println("有参构造器..");
     }
 
+    public Person(String lastName, Integer age, String gender) {
+        this.lastName = lastName;
+        this.age = age;
+        this.gender = gender;
+        System.out.println("有参构造器..age");
+    }
+
+    public Person(String lastName, String email, String gender) {
+        this.lastName = lastName;
+        this.gender = gender;
+        this.email = email;
+        System.out.println("有参构造器..email");
+    }
+
 }
 
